@@ -21,11 +21,23 @@ h2 {
     vertical-align: baseline;
 }
 
+#slides {
+    overflow-x: hidden;
+    white-space: nowrap;
+    max-height: 100%;
+    width:200%;
+}
+
+#slides > section {
+    width:50%;
+}
+
 #titles {
     background-color:transparent;
     width: 100%;
     position: absolute;
     top: 0;
+    cursor: pointer;
 }
 
 #titles .title {
@@ -36,15 +48,16 @@ h2 {
     font-size: 12vw;
     font-family: stalemate, fantasy;
     white-space: nowrap;
+    font-weight: normal;
 }
 
-#butterfly {
-  text-indent: -9999px;
-  width: 100%;
+#home-page {
   height: 100%;
   background: url(../images/butterfly.svg);
   background-size: 100%;
   background-repeat: no-repeat;
+  position: relative;
+  float:left;
 }
 #titles .subtitle {
     text-align: right;
@@ -54,14 +67,18 @@ h2 {
     white-space: nowrap;
 }
 
-#web {
-    width:100%;
-    position: relative;
-}
-
 #bio {
-    position: relative;
     font-family: fantasy;
+    float:left;
+    width:50%;
+}
+#bio p {
+    white-space: normal;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
 }
 
 * {
@@ -234,21 +251,5 @@ h2 {
     }
     .navigation li:last-child {
         margin-right:0;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    #spider,
-    #spider-line {
-        display:none;
-    }
-
-}
-
-@media screen and (max-width:600px) {
-    #gege {
-        width: 350px;
-        top: 250px;
-        margin: 5px 0;
     }
 }
