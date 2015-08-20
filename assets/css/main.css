@@ -1,3 +1,9 @@
+
+@teal: #7a9eaf;
+@purple: #655989;
+@peach: #de88a5;
+@salmon: #ffcebb;
+
 header{
     width: 100%;
     height: 700px;
@@ -7,9 +13,9 @@ body {
     margin:0px;
     padding: 0px;
     width: 100%;
-    color:#EEC2C5;
+    color:@salmon;
     height: 100%;
-    background-color: #461A32;
+    background-color: @purple;
 }
 
 h2 {
@@ -79,7 +85,6 @@ h2 {
     white-space: normal;
     padding: 20px;
     background-color: white;
-    border-radius: 4px;
     width: 80%;
     margin: auto;
     text-indent: 50px;
