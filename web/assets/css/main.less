@@ -1,22 +1,20 @@
 
-@teal: #7a9eaf;
-@purple: #655989;
+@teal: #375375;
+@purple: #461A32;
 @peach: #de88a5;
-@salmon: #ffcebb;
+@salmon: #EEC2C5;
 
 header{
     width: 100%;
     height: 700px;
 }
-
 body {
     margin:0px;
     padding: 0px;
     width: 100%;
-    color:@salmon;
     height: 100%;
-    background-color: @purple;
 }
+
 
 h2 {
     margin: 0;
@@ -30,6 +28,7 @@ h2 {
 .overflow {
     overflow-x:hidden;
     width:100%;
+    height:100%;
 }
 #slides {
     white-space: nowrap;
@@ -67,6 +66,8 @@ h2 {
   background-repeat: no-repeat;
   position: relative;
   float:left;
+  color:@salmon;
+  background-color: @purple;
 }
 #titles .subtitle {
     text-align: right;
@@ -80,14 +81,18 @@ h2 {
     font-family: fantasy;
     float:left;
     width:50%;
+    background-color: @teal;
+    height:100%;
+    overflow: auto;
 }
 #bio p {
     white-space: normal;
     padding: 20px;
-    background-color: white;
     width: 80%;
     margin: auto;
     text-indent: 50px;
+    background-color: @teal;
+    color: @salmon;
 }
 
 * {
