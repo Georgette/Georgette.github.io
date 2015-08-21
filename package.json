@@ -2,10 +2,15 @@
   "name": "pincin.com",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cp ./node_modules/less/dist/less.js web/assets/"
   },
   "author": "gpincin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "less": "^2.5.1"
+  }
 }

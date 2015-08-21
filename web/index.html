@@ -64,8 +64,10 @@
         <hr class="style-seven"/> -->
         </div>
     </div>
-    <script src="./node_modules/less/dist/less.min.js"></script>
+    <script>less = { env: 'development'};</script>
+    <script src="assets/less.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>less.watch();</script>
     <script src="index.js"></script>
 
 </body>
