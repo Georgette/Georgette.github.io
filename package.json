@@ -5,12 +5,18 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cp ./node_modules/less/dist/less.js web/assets/"
+    "bundle": "browserify -t lessify app/main.js -o web/bundle.js",
+    "watch" : "watchify -t lessify app/main.js -o web/bundle.js"
   },
   "author": "gpincin",
   "license": "ISC",
   "dependencies": {
+    "browserify": "^11.0.1",
     "express": "^4.13.3",
-    "less": "^2.5.1"
+    "jquery": "^2.1.4",
+    "less": "^2.5.1",
+    "lessify": "^1.0.1",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
   }
 }

@@ -1,3 +1,6 @@
+require('./styles/main.less')
+var $ = require('jquery')
+
 
 $( document ).ready(function() {
     var $homepage = $('#home-page')
