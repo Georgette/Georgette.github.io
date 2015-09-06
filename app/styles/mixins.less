@@ -136,3 +136,23 @@
 	-ms-transform-origin:     @x @y;
 	-o-transform-origin:      @x @y;
 }
+
+.display-flexbox(@layout) {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-box-pack: @layout;
+    -moz-box-pack: @layout;
+    -ms-flex-pack: @layout;
+    -webkit-justify-content: @layout;
+    justify-content: @layout;
+    /* modern Flexbox only */
+    -ms-flex-align: @layout;
+    -webkit-align-items: @layout;
+    align-items: @layout;
+    /* legacy Flexbox only */
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+}
