@@ -1,17 +1,16 @@
-
-@teal: #375375;
-@purple: #461A32;
-@peach: #de88a5;
-@salmon: #EEC2C5;
+@background-start:#FDB87A;
+@background-mid: #FFF8CD;
+@background-nuetral-stop: #fafafa;
+@font-red: #BD2D2C;
+@font-white:#FFFFF0;
 @import '../../node_modules/bootstrap/less/bootstrap.less';
 @import './mixins.less';
 
 body {
     margin:0;
     padding:0;
-    background: rgba(255,198,133,1);
-     .gradient (rgba(255,198,133,1), rgba(108,120,172,1));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc685', endColorstr='#6c78ac', GradientType=0 );
+    background: @background-mid;
+    .gradient (@background-nuetral-stop 0%, @background-nuetral-stop 1%, @background-mid 65%, @background-start 100%;);
 }
 
 
@@ -23,9 +22,11 @@ h3 {
 }
 
 .cards {
-    .box-shadow (0 0 2px 2px #222222);
-    background-color: ivory;
-    opacity: .9;
+    .box-shadow (0 0 10px 1px #222222);
+    background-color: #878270;
+    color:#FAE8D1;
+    opacity: .8;
+    border-radius: 4px;
 }
 
 #content-background {
@@ -36,12 +37,12 @@ h3 {
 
 .circle-tags {
     font-family: Dancing Script,stalemate, fantasy;
-    background-color: #8585A5;
+    background-color: #B2577A;
     .border-radius(50%);
     .box-shadow (0 0 10px 1px #222222);
     padding:10px;
-    width:10vw;
-    height:10vw;
+    width:14vw;
+    height:14vw;
     text-align: center;
     vertical-align: middle;
     /* fallback for non-Flexbox browsers */
@@ -66,26 +67,27 @@ h3 {
 }
 
 #moon {
-    background-color: #8585A5;
+    background-color: #FDB87A;
     position:absolute;
     top:-20vw;
     left:6vw;
     .border-radius(50%);
-    width:40vw;
-    height:40vw;
+    width:50vw;
+    height:50vw;
     opacity: .9;
     .box-shadow(0 0 10px 1px #222);
-    min-width: 198px;
-    min-height: 198px;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 .little-moons {
-    background-color: #EDE8D6;
-    opacity: .9;
+    color:antiquewhite;
+    opacity: .8;
     min-width: 70px;
     min-height: 70px;
+    font-size: 2.5vw;
     position: absolute;
-    background-color: #EDE8D6;
+    background-color: #9F9A85;
     .box-shadow(0 0 10px 1px #332F21);
     position: absolute;
 }
@@ -100,17 +102,18 @@ h3 {
 #little-moon-right {
     .circle-tags;
     .little-moons;
-    top:0;
-    left:0;
+    top:-20px;
+    left:48vw;
 }
 
 .name {
-    font-size: 17vw;
+    font-size: 22vw;
     font-family: Dancing Script,stalemate, fantasy;
-    color: #FFC787;
+    color: rgba(72, 92, 90, 0.78);
     margin-top:15px;
     margin-bottom:0;
-    .text-shadow(2px 2px #5F481B);
+    .text-shadow(10px -3px #B3A191);
+    line-height: 28vw;
 }
 
 blockquote {
@@ -118,12 +121,13 @@ blockquote {
     font-family: stalemate, fantasy;
     font-style: italic;
     font-size: 3vw;
-    margin: 0 auto;
+    // margin: 0 auto;
     display: inline-block;
     position: relative;
     &:first-child {
         z-index: 10;
     }
+    border-left:0;
 }
 
 sub {
@@ -133,7 +137,7 @@ sub {
 
 @media(max-width:600px) {
     .name {
-        font-size: 80px;
+        font-size: 120px;
     }
 
     blockquote {
