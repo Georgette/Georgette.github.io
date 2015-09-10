@@ -1,10 +1,10 @@
-@largest-circle:#928C82;
-@inner-circle: #467790;
-@petal-circle: #BB6B8C;
+@largest-circle:rgba(101, 82, 52, 0.5);
+@inner-circle: #B7769F;
+@petal-circle: #7F6490;
 @primary-text:#E9E4D8;
-@shadow:0 0 8px 1px #585247;
+@shadow:0 0 6px 1px #585247;
 @border:4px solid #E9E4D8;
-@text-shadow: #585247;
+@text-shadow: #648990;
 @import '../../node_modules/bootstrap/less/bootstrap.less';
 @import './mixins.less';
 
@@ -23,93 +23,105 @@ body {
     font-family: Dancing Script,stalemate, fantasy;
     background-color: @petal-circle;
     .border-radius(50%);
-    width:15vmax;
-    height:15vmax;
+    width:19vmax;
+    height:19vmax;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
     .display-flexbox(center);
     font-size: 2vmax;
-    border:@border;
 
 }
 
 #body-background {
     background: url(../images/hex-background.svg);
     background-size: cover;
-
     padding: 0 10%;
 }
 
 #moon, #moon-group {
     .circle-tags;
-    padding-top: 30px;
     background-color: @largest-circle;
     position:absolute;
     .border-radius(50%);
-    width:50vmax;
-    height:50vmax;
-    .box-shadow(@shadow);
+    width:45vmax;
+    height:45vmax;
+    // .box-shadow(@shadow);
     min-width: 250px;
     min-height: 250px;
 }
 
 #moon {
     top:-20vmax;
-    left:6vmax;
+    left:14vmax;
 }
 
 #moon-group {
     position:fixed;
     bottom:-20vmax;
-    right:6vmax;
+    right:14vmax;
     .name {
-        font-size: 10vmax;
-        margin-bottom: 15vmax;
+        font-size: 12vmax;
+        margin-bottom: 20vmax;
     }
 }
 
 .inner-moon {
     .circle-tags;
-    background-color: @inner-circle;
-    position:absolute;
+    background: url(../images/hex-background.svg);
+    // background-color: @inner-circle;
+    background-size: 100%;
     color: @petal-circle;
     .border-radius(50%);
-    width:40vmax;
-    height:40vmax;
-    min-width: 200px;
-    min-height: 200px;
+    height:70%;
+    width:70%;
     .box-shadow(@shadow);
-    border:6px dashed #E9E4D8;
+    border:1px dashed #E9E4D8;
 
 }
 
 .inner-inner-moon {
     .circle-tags;
-    background-color: @largest-circle;
-
-    height:60%;
-    width:60%;
-    .box-shadow(@shadow);
-    border:6px solid #E9E4D8;
+    background-color: rgba(148, 10, 97, 0.5);
+    height:50%;
+    width:50%;
+    // .box-shadow(@shadow);
+    // border:1px dotted #B7769F;
 }
 
 .char1 {
-    // transform: rotate(12deg);
+    transform: rotate(-32deg);
+    font-size: 20vmax;
+    position:relative;
+    bottom: -38px;
     .name;
 }
 .char2 {
     // transform: rotate(12deg);
     .name;
     font-size: 10vmax;
+    position: relative;
+    left: -18px;
+    bottom: 15px;
 
 }
 .char3 {
+    transform: rotate(-32deg);
+    font-size: 20vmax;
+    position:relative;
+    bottom: -38px;
     // transform: rotate(-12deg);
+    // font-size: 20vmax;
+    // bottom: -25px;
+    position:relative;
+
     .name;
 }
 .char4 {
     // transform: rotate(-12deg);
+    position: relative;
+    left: -18px;
+    bottom: 15px;
     .name;
     font-size: 10vmax;
 
@@ -124,32 +136,33 @@ body {
 #moon-group .inner-moon {
     bottom:3vmax;
     right:5vmax;
+
     #little-moon-6 {
         .little-moons;
-        bottom:15vmax;
-        left:-14vmax;
+        bottom: 14vmax;
+        left: -15vmax;
     }
 
-    #little-moon-7{
+    #little-moon-7 {
         .little-moons;
-        bottom:35vmax;
-        left:-6vmax;
-
-
-    }
-
-    #little-moon-8{
-        .little-moons;
-        bottom:43vmax;
-        left:14vmax;
+        bottom: 33vmax;
+        left: -7vmax;
 
 
     }
 
-    #little-moon-9{
+    #little-moon-8 {
         .little-moons;
-        bottom:35vmax;
-        right:-6vmax;
+        bottom: 41vmax;
+        left: 13vmax;
+
+
+    }
+
+    #little-moon-9 {
+        .little-moons;
+        bottom: 33vmax;
+        right: -7vmax;
 
 
     }
@@ -157,11 +170,12 @@ body {
     #little-moon-10 {
         .circle-tags;
         .little-moons;
-        bottom:15vmax;
-        right:-14vmax;
+        bottom: 14vmax;
+        right: -15vmax;
 
 
     }
+
 
 }
 
@@ -175,7 +189,7 @@ body {
     background-color:#E9E4D8;
     position: absolute;
     &:hover {
-        background-color: #467790;
+        background-color: transparent;
     }
     border:0px;
 }
@@ -188,48 +202,57 @@ body {
     font-size: 2.5vmax;
     background-color: @petal-circle;
     &:hover {
-        background-color: #467790;
+        background-color: rgba(148, 10, 97, 0.5);
     }
-    border: 4px dashed @petal-circle;
+    border: 2px dashed @petal-circle;
 
 }
 
 #little-moon-1 {
     .little-moons;
-    top:-10px;
-    left:0;
+    top: 14vmax;
+    left: -15vmax;
 }
 
 #little-moon-2 {
     .little-moons;
-    top:15vmax;
-    left:7vmax;
+    top: 33vmax;
+    left: -7vmax;
+
+
 }
 
 #little-moon-3 {
     .little-moons;
-    top:23vmax;
-    left:24vmax;
+    top: 41vmax;
+    left: 13vmax;
+
+
 }
 
-#little-moon-4{
+#little-moon-4 {
     .little-moons;
-    top:16vmax;
-    left:41vmax;
+    top: 33vmax;
+    right: -7vmax;
+
+
 }
 
 #little-moon-5 {
+    .circle-tags;
     .little-moons;
-    top:-10px;
-    left:48vmax;
+    top: 14vmax;
+    right: -15vmax;
+
+
 }
 
 .name {
     font-size: 18vmax;
     font-family: Dancing Script,stalemate, fantasy;
-    color: @primary-text;
+    color: #6D6962;
     margin-bottom:0;
-    .text-shadow(0px 2px @text-shadow);
+    // .text-shadow(0px 2px @text-shadow);
     margin-top:9vmax;
 }
 
@@ -251,20 +274,5 @@ body {
         font-size: 13px !important;
     }
 
-    // #little-moon-5 {
-    //     left: 250px;
-    // }
-    // #little-moon-4 {
-    //     left: 235px;
-    //     top:87px;
-    // }
-    // #little-moon-3 {
-    //     left: 130px;
-    //     top:148px;
-    // }
-    // #little-moon-2 {
-    //     left: 18px;
-    //     top:106px;
-    // }
 
 }
