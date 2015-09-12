@@ -35,11 +35,12 @@ body {
 
 #body-background {
     background: url(../images/hex-background.svg);
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 0 10%;
 }
 
-#moon, #moon-group {
+#circle, #circle-group {
     .circle-tags;
     background-color: @largest-circle;
     position:absolute;
@@ -49,14 +50,16 @@ body {
     // .box-shadow(@shadow);
     min-width: 250px;
     min-height: 250px;
+    max-width: 425px;
+    max-height: 425px;
 }
 
-#moon {
+#circle {
     top:-20vmax;
     left:14vmax;
 }
 
-#moon-group {
+#circle-group {
     position:fixed;
     bottom:-20vmax;
     right:14vmax;
@@ -66,7 +69,7 @@ body {
     }
 }
 
-.inner-moon {
+.inner-circle {
     .circle-tags;
     background: url(../images/hex-background.svg);
     // background-color: @inner-circle;
@@ -80,7 +83,7 @@ body {
 
 }
 
-.inner-inner-moon {
+.inner-inner-circle {
     .circle-tags;
     background-color: rgba(148, 10, 97, 0.5);
     height:50%;
@@ -128,48 +131,48 @@ body {
 }
 
 
-#moon .inner-moon {
+#circle .inner-circle {
     top:3vmax;
     left:6vmax;
 }
 
-#moon-group .inner-moon {
+#circle-group .inner-circle {
     bottom:3vmax;
     right:5vmax;
 
-    #little-moon-6 {
-        .little-moons;
+    #little-circle-6 {
+        .little-circles;
         bottom: 14vmax;
         left: -15vmax;
     }
 
-    #little-moon-7 {
-        .little-moons;
+    #little-circle-7 {
+        .little-circles;
         bottom: 33vmax;
         left: -7vmax;
 
 
     }
 
-    #little-moon-8 {
-        .little-moons;
+    #little-circle-8 {
+        .little-circles;
         bottom: 41vmax;
         left: 13vmax;
 
 
     }
 
-    #little-moon-9 {
-        .little-moons;
+    #little-circle-9 {
+        .little-circles;
         bottom: 33vmax;
         right: -7vmax;
 
 
     }
 
-    #little-moon-10 {
+    #little-circle-10 {
         .circle-tags;
-        .little-moons;
+        .little-circles;
         bottom: 14vmax;
         right: -15vmax;
 
@@ -179,10 +182,12 @@ body {
 
 }
 
-.little-moons {
+.little-circles {
     color:@primary-text;
     min-width: 70px;
     min-height: 70px;
+    max-width: 170px;
+    max-height: 170px;
     font-size: 2.5vmax;
     position: absolute;
     .box-shadow(@shadow);
@@ -194,7 +199,7 @@ body {
     border:0px;
 }
 
-.little-moon-inner {
+.little-circle-inner {
     color:@primary-text;
     .circle-tags;
     height:99%;
@@ -208,39 +213,39 @@ body {
 
 }
 
-#little-moon-1 {
-    .little-moons;
+#little-circle-1 {
+    .little-circles;
     top: 14vmax;
     left: -15vmax;
 }
 
-#little-moon-2 {
-    .little-moons;
+#little-circle-2 {
+    .little-circles;
     top: 33vmax;
     left: -7vmax;
 
 
 }
 
-#little-moon-3 {
-    .little-moons;
+#little-circle-3 {
+    .little-circles;
     top: 41vmax;
     left: 13vmax;
 
 
 }
 
-#little-moon-4 {
-    .little-moons;
+#little-circle-4 {
+    .little-circles;
     top: 33vmax;
     right: -7vmax;
 
 
 }
 
-#little-moon-5 {
+#little-circle-5 {
     .circle-tags;
-    .little-moons;
+    .little-circles;
     top: 14vmax;
     right: -15vmax;
 
