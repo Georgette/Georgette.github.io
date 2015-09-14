@@ -19,9 +19,15 @@ body {
     overflow: hidden;
 }
 
+.petals {
+    background: url(../images/hex-background.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .circle-tags {
     font-family: Dancing Script,stalemate, fantasy;
-    background-color: @petal-circle;
+    // background-color: @petal-circle;
     .border-radius(50%);
     width:19vmax;
     height:19vmax;
@@ -72,6 +78,8 @@ body {
 .inner-circle {
     .circle-tags;
     background: url(../images/hex-background.svg);
+    background-color: #908564;
+    background-blend-mode: luminosity;
     // background-color: @inner-circle;
     background-size: 100%;
     color: @petal-circle;
@@ -79,13 +87,13 @@ body {
     height:70%;
     width:70%;
     .box-shadow(@shadow);
-    border:1px dashed #E9E4D8;
+    border:8px solid white;
 
 }
 
 .inner-inner-circle {
     .circle-tags;
-    background-color: rgba(148, 10, 97, 0.5);
+    // background-color: rgba(148, 10, 97, 0.5);
     height:50%;
     width:50%;
     // .box-shadow(@shadow);
@@ -144,17 +152,44 @@ body {
         .little-circles;
         bottom: 14vmax;
         left: -15vmax;
+        span:first-child {
+            display:none;
+        }
     }
+
+    #little-circle-6, #little-circle-7 {
+        .little-circle-inner  {
+            &:hover {
+                span {
+                    &:first-child {
+                        display: block;
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
 
     #little-circle-7 {
         .little-circles;
+        .petals;
         bottom: 33vmax;
         left: -7vmax;
-
+        span:first-child {
+            display:none;
+        }
 
     }
 
+
     #little-circle-8 {
+        .petals;
         .little-circles;
         bottom: 41vmax;
         left: 13vmax;
@@ -163,6 +198,7 @@ body {
     }
 
     #little-circle-9 {
+        .petals;
         .little-circles;
         bottom: 33vmax;
         right: -7vmax;
@@ -171,6 +207,7 @@ body {
     }
 
     #little-circle-10 {
+        .petals;
         .circle-tags;
         .little-circles;
         bottom: 14vmax;
@@ -193,6 +230,7 @@ body {
     .box-shadow(@shadow);
     background-color:#E9E4D8;
     position: absolute;
+
     &:hover {
         background-color: transparent;
     }
@@ -202,14 +240,16 @@ body {
 .little-circle-inner {
     color:@primary-text;
     .circle-tags;
+    .petals;
     height:99%;
     width:99%;
+    background-color: #908564;
+    background-blend-mode: luminosity;
     font-size: 2.5vmax;
-    background-color: @petal-circle;
     &:hover {
         background-color: rgba(148, 10, 97, 0.5);
     }
-    border: 2px dashed @petal-circle;
+    border: 8px solid white;
 
 }
 
@@ -287,35 +327,40 @@ body {
         font-size: 116px !important;
     }
 
+    #circle {
+        top:-180px;
+        left:126px;
+    }
+
     .inner-circle {
 
 
     #little-circle-1 {
         .little-circles;
-        top: 14vmax;
-        left: -15vmax;
+        top: 133px;
+        left: -142px;
     }
 
     #little-circle-2 {
         .little-circles;
-        top: 33vmax;
-        left: -7vmax;
+        top: 313px;
+        left: -66px;
 
 
     }
 
     #little-circle-3 {
         .little-circles;
-        top: 41vmax;
-        left: 13vmax;
+        top: 390px;
+        left: 124px;
 
 
     }
 
     #little-circle-4 {
         .little-circles;
-        top: 33vmax;
-        right: -7vmax;
+        top: 313px;
+        right: -66px;
 
 
     }
@@ -323,8 +368,8 @@ body {
     #little-circle-5 {
         .circle-tags;
         .little-circles;
-        top: 14vmax;
-        right: -15vmax;
+        top: 133px;
+        right: -142px;
 
 
     }
