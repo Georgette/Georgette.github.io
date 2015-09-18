@@ -3,6 +3,7 @@
 @import './mixins.less';
 
 body {
+
     margin:0;
     padding:0;
     width:100%;
@@ -26,6 +27,7 @@ body {
     }
 
 }
+
 .petal-group {
 
     position: relative;
@@ -82,6 +84,7 @@ body {
 
 
 #body-background {
+
     background: url(../images/limbs.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,18 +96,9 @@ body {
     height:100%;
 
 }
-.flexbox {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center;
-    height:100%;
-}
 
 .name {
+
     font-family: Dancing Script,stalemate, fantasy;
     text-shadow: 1px 1px rgb(140, 130, 119);
     color:@text-color;
@@ -113,9 +107,13 @@ body {
     white-space: nowrap;
 
     span {
+
         display: inline-block;
+
     }
+
     .char1 {
+        
         .transform(rotate(-16deg));
         font-size: 24vmax;
         line-height: 32vmax;
@@ -130,13 +128,16 @@ body {
     }
 
     .char3 {
+
         font-size: 24vmax;
         position:relative;
         line-height: 32vmax;
         bottom: -13px;
 
     }
+
     .char4 {
+
         .transform(rotate(-24deg));
         font-size: 12vmax;
         position: relative;
@@ -157,15 +158,19 @@ body {
 }
 
 #linkedin {
+
     .petals;
     bottom: 0;
     left: 4vmax;
+
 }
 
 #blog {
+
     .petals;
     top: 0;
     right: 0;
+
 }
 
 @media screen and (max-height:600px) {
@@ -183,9 +188,11 @@ body {
 }
 
 @media screen and (max-width:1050px) {
+
     #bio {
         background-color: rgba(255, 255, 255, 0.8);
     }
+
 }
 
 @media screen and (max-width:800px) and (min-height:450px) {

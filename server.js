@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 
 //knows to look in web directory
-app.use(express.static('web'))
+app.use(express.static('.'))
 
 var server = app.listen(8080, function () {
     var host = server.address().address;

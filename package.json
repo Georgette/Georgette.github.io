@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "browserify -t lessify app/main.js -o web/bundle.js",
-    "watch": "watchify -t lessify app/main.js -d -o web/bundle.js"
+    "bundle": "browserify -t lessify app/main.js -o bundle.js",
+    "watch": "watchify -t lessify app/main.js -d -o bundle.js"
   },
   "author": "gpincin",
   "license": "ISC",
