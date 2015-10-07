@@ -1,115 +1,122 @@
-@text-color:#69920D;
-@brown-tree-color:rgba(66, 61, 52, 1);
+@text-color-emphasis:#E0FF01;
+@panel-background-see-through:rgba(140, 140, 140, 0.8);
+@sub-panel:rgba(255, 255, 255, .5);
+@font-style: 'Indie Flower', cursive;
 @import './mixins.less';
 
 body {
 
     margin:0;
     padding:0;
-    background: url(../images/office.png) no-repeat;
+    background: @panel-background-see-through url(../images/office.png) no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    .background-size(cover);
 
 }
 
 #body-background {
 
-    .btn {
-      cursor: pointer;
-      margin: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      padding: 10px;
-      font-size: 22px;
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-      -o-transition: .3s;
-      display: inline-block;
-      width:120px;
-      color: #E0FF01;
-      border: 2px white solid;
-    }
-
-    .btn:hover {
-      cursor: pointer;
-      color: #fff;
-      background-color: rgba(224, 255, 0, 0.5);
-    }
-
-
     .buttons {
       height: 100%;
       padding-top: 30px;
       text-align: center;
+
+      .btn {
+        cursor: pointer;
+        margin: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 22px;
+        .transition(.3s);
+        display: inline-block;
+        width:120px;
+        color: @text-color-emphasis;
+        border: 2px white solid;
+
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+          background-color: rgba(224, 255, 0, 0.5);
+        }
+
+      }
+
     }
 
     h2 {
+
         font-size: 6vmax;
-        font-family: 'Indie Flower', cursive;
+        font-family: @font-style;
         text-align: center;
 
     }
 
     h1 {
+
         font-size: 8vmax;
-        font-family: 'Indie Flower', cursive;
+        font-family: @font-style;
         text-align: center;
         b {
             font-size: 10vmax;
         }
 
     }
+
     b {
+
         font-weight: normal;
         font-family: monospace;
-        color: #E0FF01;
-
+        color: @text-color-emphasis;
     }
 
     #bio, #joke, #family {
+
         padding: 5%;
         font-size: 2.5vmax;
         font-family: 'Indie Flower', cursive;
-        background-color: rgba(140, 140, 140, 0.8);
+        background-color: @panel-background-see-through;
         text-align: center;
+
         span {
             font-size: 2vmax;
             font-family: monospace;
         }
+
     }
 
 
     #joke, #family {
+
         margin-top: 150px;
+
         p {
             margin-top: 10px;
             font-family: monospace;
             font-size: 1.5vmax;
             padding:2%;
-            background-color: rgba(255, 255, 255, .5)
+            background-color: @sub-panel;
         }
+
     }
 }
 
 @media (max-width: 800px) {
+
     body {
 
+        margin:0;
+        padding:0;
+        background: @panel-background-see-through url(../images/office-smaller.png) no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        .background-size(cover);
+
     }
+
     #joke, #family {
         display:none !important;
     }
-    #bio, #joke, #family {
-        margin-top:0px !important;
-    }
-}
 
-// @media (max-width:600px) {
-//     #body-background .buttons {
-//         height: 55%;
-//     }
-// }
+}
