@@ -6,12 +6,13 @@ body {
 
     margin:0;
     padding:0;
-    background: url(../images/office.png) no-repeat center center fixed;
+    background: url(../images/office.png) no-repeat center;
+    background-attachment: fixed;
+    background-size: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-size: 100% 100%
 
 }
 
@@ -97,7 +98,7 @@ body {
 
 @media (max-width: 700px) {
     body {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
     #bio, #joke, #family {
         margin-top:0px !important;
