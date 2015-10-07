@@ -6,7 +6,8 @@ body {
 
     margin:0;
     padding:0;
-    background: url(../images/office.png) no-repeat center;
+    background: url(../images/office.png) no-repeat;
+    background-position: center center;
     background-attachment: fixed;
     background-size: 100%;
     -webkit-background-size: cover;
@@ -30,7 +31,7 @@ body {
       -moz-transition: .3s;
       -o-transition: .3s;
       display: inline-block;
-      width:110px;
+      width:120px;
       color: #E0FF01;
       border: 2px white solid;
     }
@@ -96,12 +97,22 @@ body {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     body {
+        background: url(../images/office-mobile.png) no-repeat !important;
         background-attachment: scroll !important;
+        background-postion:right bottom !important;
+        background-size: 100% !important;
     }
+
     #bio, #joke, #family {
         margin-top:0px !important;
         background-color: rgba(140, 140, 140, 1) !important;
+    }
+}
+
+@media (max-width:600px) {
+    #body-background .buttons {
+        height: 55%;
     }
 }
