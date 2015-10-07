@@ -7,7 +7,11 @@ body {
     margin:0;
     padding:0;
     background: url(../images/office.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    background-size: 100% 100%
 
 }
 
@@ -93,7 +97,6 @@ body {
 
 @media (max-width: 700px) {
     body {
-        background-size: cover;
         background-attachment: scroll;
     }
     #bio, #joke, #family {
