@@ -1,5 +1,5 @@
 @text-color-emphasis:#E0FF01;
-@panel-background-see-through:rgba(140, 140, 140, 0.8);
+@panel-background-see-through:rgba(255, 255, 255, 0.8);
 @sub-panel:rgba(255, 255, 255, .5);
 @font-style: 'Indie Flower', cursive;
 @import './mixins.less';
@@ -8,7 +8,7 @@ body {
 
     margin:0;
     padding:0;
-    background: @panel-background-see-through url(../images/office.png) no-repeat;
+    background: @panel-background-see-through url(../images/office-compressed.jpg) no-repeat;
     background-position: center center;
     background-attachment: fixed;
     .background-size(cover);
@@ -69,6 +69,7 @@ body {
         font-weight: normal;
         font-family: monospace;
         color: @text-color-emphasis;
+        text-shadow: 0px 1px 2px #717171;
     }
 
     #bio, #joke, #family {
@@ -89,7 +90,7 @@ body {
 
     #joke, #family {
 
-        margin-top: 150px;
+        margin-top: 2px;
 
         p {
             margin-top: 10px;
